@@ -1,12 +1,17 @@
 #include <stdio.h>
 int main() {
-    int num,average,deviation;
-    int value[num];
-    printf("Enter the number: ");
-    scanf("%d", &num);
-    printf("Enter the values: ");
-    for (int i = 0; i < num; i++) {
-        scanf("%d", &value[i]);
+    float v[5], avg = 0;
+    int i;
+
+    for (i = 0; i < 5; i++) {
+        scanf("%f", &v[i]);
+        avg=avg+v[i];
     }
-    
+
+    avg= avg/5;
+
+    for (i = 0; i < 5; i++)
+        printf("Deviation = %f\n", v[i] - avg);
+
+    return 0;
 }
